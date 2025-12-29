@@ -1,0 +1,39 @@
+@Host = http://localhost:5227
+
+POST {{Host}}/api/User/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Name": "oualid",
+  "Age": 21
+}
+###
+
+GET {{Host}}/api/User/
+Accept: application/json
+
+###
+
+GET {{Host}}/api/User/1
+Accept: application/json
+
+###
+
+PUT {{Host}}/api/User/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Name": "oualid",
+  "Age": 22
+}
+
+###
+
+DELETE {{Host}}/api/User/1
+Accept: application/json
+
+
