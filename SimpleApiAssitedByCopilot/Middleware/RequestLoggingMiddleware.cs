@@ -2,9 +2,9 @@
 {
     public class RequestLoggingMiddleware
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<RequestLoggingMiddleware> _logger;
         private readonly RequestDelegate _next;
-        public RequestLoggingMiddleware(ILogger logger, RequestDelegate next)
+        public RequestLoggingMiddleware(ILogger<RequestLoggingMiddleware> logger, RequestDelegate next)
         {
             _logger = logger;
             _next = next;
